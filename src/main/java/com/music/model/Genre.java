@@ -21,7 +21,7 @@ public class Genre {
 	private Integer id;
 	@Column
 	private String genreName;
-	
+	@OneToMany(mappedBy = "genre")
 	private List<Song> songs;
 	
 
