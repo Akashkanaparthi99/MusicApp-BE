@@ -1,5 +1,7 @@
 package com.music.model;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,4 +16,6 @@ public class Artist {
 	private Integer Id;
 	@Column
 	private String artistName;
+	@ManyToMany(mappedBy = "artists")
+	private List<Song> songs;
 }
